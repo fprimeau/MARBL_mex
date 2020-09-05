@@ -3,7 +3,7 @@ clear variables
 % strange hangs and crashes if MEX doesnt end gracefully on previous run.
 clear
 
-cd '~/Desktop/UCI/MARBL/1D_MARBL_demo'
+% cd '~/Desktop/UCI/MARBL/1D_MARBL_demo'
 addpath ("plotting", "utils")
 
 % Big picture:
@@ -191,7 +191,7 @@ disp(['Runtime per iteration per level: ', num2str(elapsedTime/nstep/interior.do
 %   -> need a few seconds for Matlab to finish updating command window if
 %   printing a huge number of levels...
 %
-print_from_marbl_to_matlab(); % should print to a file.
+% print_from_marbl_to_matlab(); % should print to a file.
 % mex_marbl_driver('print_sfo');                    % DEBUG
 disp('Shutting down MEX in 3 (s)...'); pause(3);
 mex_marbl_driver('shutdown');
