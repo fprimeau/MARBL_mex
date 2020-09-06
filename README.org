@@ -2,7 +2,7 @@
 This code provides an Matlab mex interface for MARBL Marine
 Biogeochemistry Library (https://github.com/marbl-ecosys/MARBL.git)
 
-The main developers for this code is JJ Becker and Francois Primeau. 
+The main developers for this code is JJ Becker (jjbecker) and Francois Primeau (fprimeau). 
 
 * Instalation Instructions
 Comming soon... 
