@@ -1,0 +1,119 @@
+* MARBL MEX Variables
+
+** State variables nlev x ncols
+|---------------+-----------------+----------+-----------------------------------+------------------------------|
+|      only the |                 |          |                                   |                              |
+|      numbered |                 |          |                                   | x indicates that we have a   |
+| variables are |                 |          |                                   | gridded OCIM field available |
+|     essential | state variables | units    | notes                             | for initialization           |
+|---------------+-----------------+----------+-----------------------------------+------------------------------|
+|             1 | O2              | mmol/m^3 |                                   | x                            |
+|             2 | ALK             | mmol/m^3 |                                   | x                            |
+|             3 | Lig             |          |                                   | ?                            |
+|---------------+-----------------+----------+-----------------------------------+------------------------------|
+|             4 | DIC             | mmol/m^3 | inorganic carbon                  | x                            |
+|               | ( DI13C )       | mmol/m^3 |                                   | ?                            |
+|               | ( DI14C )       | mmol/m^3 |                                   | ?                            |
+|             5 | DOC             | mmol/m^3 | organic carbon                    | x see Letscher et al. (2014) |
+|               | ( DO13Ctot )    | mmol/m^3 |                                   | ?                            |
+|               | ( DO14Ctot )    | mmol/m^3 |                                   | ?                            |
+|             6 | DOCr            | mmol/m^3 | recalcitrant DOM                  | x see Letscher et al. (2014) |
+|---------------+-----------------+----------+-----------------------------------+------------------------------|
+|             7 | DON             | mmol/m^3 | DOM                               | x see Letscher et al. (2014) |
+|             8 | DOP             | mmol/m^3 | DOM                               | x see Letscher et al. (2014) |
+|             9 | DOPr            | mmol/m^3 | recalcitrant DOM                  | x see Letscher et al. (2014) |
+|            10 | DONr            | mmol/m^3 | recalcitrant DOM                  | x see Letscher et al. (2014) |
+|---------------+-----------------+----------+-----------------------------------+------------------------------|
+|            11 | PO4             | mmol/m^3 | nutrient                          | x                            |
+|            12 | NO3             | mmol/m^3 | nutrient                          | x                            |
+|            13 | SiO3            | mmol/m^3 | nutrient                          | x                            |
+|            14 | NH4             | mmol/m^3 | nutrient                          | ? (just use zero?)           |
+|            15 | Fe              | mmol/m^3 | nutrient                          | ?                            |
+|---------------+-----------------+----------+-----------------------------------+------------------------------|
+|            16 | zooC            | mmol/m^3 | zooplankton (Redfield C:N:P)      | ?                            |
+|               | ( zootot13C )   | mmol/m^3 |                                   | ?                            |
+|               | ( zootot14C )   | mmol/m^3 |                                   | ?                            |
+|---------------+-----------------+----------+-----------------------------------+------------------------------|
+|            17 | spChl           | mg/m^3   | small phyto                       | ?                            |
+|            18 | spC             | mmol/m^3 | small phyto                       | ?                            |
+|               | ( sp13C )       | mmol/m^3 |                                   | ?                            |
+|               | ( sp14C )       | mmol/m^3 |                                   | ?                            |
+|            19 | spP             | mmol/m^3 | small phyto                       | ?                            |
+|            20 | spFe            | mmol/m^3 | small phyto                       | ?                            |
+|            21 | spCaCO3         | mmol/m^3 | small phyto                       | ?                            |
+|               | ( spCa13CO3 )   | mmol/m^3 |                                   | ?                            |
+|               | ( spCaC14CO3 )  | mmol/m^3 |                                   | ?                            |
+|---------------+-----------------+----------+-----------------------------------+------------------------------|
+|            22 | diatChl         | mg/m^3   | diatom                            | ?                            |
+|            23 | diatC           | mmol/m^3 | diatom variable C:P fixed C:N     | ?                            |
+|            24 | diatP           | mmol/m^3 | diatom varoable C:P               | ?                            |
+|            25 | diatFe          | mmol/m^3 | diatom                            | ?                            |
+|            26 | diatSi          | mmol/m^3 | diatom                            | ?                            |
+|               | ( diat13C )     | mmol/m^3 |                                   | ?                            |
+|               | ( diat14C )     | mmol/m^3 |                                   | ?                            |
+|---------------+-----------------+----------+-----------------------------------+------------------------------|
+|            27 | diazChl         | mg/m^3   | diazotroph                        | ?                            |
+|            28 | diazC           | mmol/m^3 | diazotroph variable C:P fixed C:N | ?                            |
+|            29 | diazP           | mmol/m^3 | diazotroph variable C:P           | ?                            |
+|            30 | diazFe          | mmol/m^3 | diazotroph                        | ?                            |
+|               | ( diaz13C )     | mmol/m^3 |                                   | ?                            |
+|               | ( diaz14C )     | mmol/m^3 |                                   | ?                            |
+|---------------+-----------------+----------+-----------------------------------+------------------------------|
+|               | DIC_ALT_CO2     | mmol/m^3 | ?                                 | ?                            |
+|               | ALK_ALT_CO2     | mmol/m^3 | ?                                 | ?                            |
+|---------------+-----------------+----------+-----------------------------------+------------------------------|
+
+** Interior Forcing nlev x ncols
+|---------------+-----------+-------------+------+------------------------|
+|      only the |           |             |      |                        |
+|      numbered |           |             |      | x indicates that we    |
+| variables are | interior  |             |      | have a field available |
+|     essential | "forcing" | units       | size | on the OCIM grid       |
+|---------------+-----------+-------------+------+------------------------|
+|             1 | dust_flux | g/cm^2/s    |      | ?                      |
+|             2 | swr_surf  | W/m^2       |      | ?                      |
+|             3 | pot_temp  | degC        |      | x                      |
+|             4 | salinity  | psu         |      | x                      |
+|             5 | pressure  | bars        |      | x                      |
+|             6 | Fe_flux   | nmol/cm^2/s |      | ?                      |
+|---------------+-----------+-------------+------+------------------------|
+
+** Surface Forcing 1 x ncols
+|---------------+---------------+-------------------------|
+|      only the |               |                         |
+|      numbered |               | x indicates that we     |
+| variables are | surface       | have a field available  |
+|     essential | "forcing"     | on the OCIM grid        |
+|---------------+---------------+-------------------------|
+|             1 | u10_sqr       | x                       |
+|             2 | sss           | x                       |
+|             3 | sst           | x                       |
+|             4 | Ice Fraction  | x                       |
+|             5 | Dust Flux     | ?                       |
+|             6 | Iron Flux     | ?                       |
+|             7 | NOx Flux      | x                       |
+|             8 | NHy Flux      | ?                       |
+|             9 | Atm. pressure | x                       |
+|            10 | xco2          | x                       |
+|               | d13c          | ? atmospheric delta 13C |
+|               | d14c          | x                       |
+|---------------+---------------+-------------------------|
+|               | xco2_alt_co2  | ?                       |
+|---------------+---------------+-------------------------|
+
+** Functions of the state variables
+|-----------------+-------------|
+| names           | units       |
+|-----------------+-------------|
+| ph_surf         |             |
+| ph_3d           |             |
+|-----------------+-------------|
+| ph_surf_alt_co2 |             |
+| ph_alt_co2      |             |
+|-----------------+-------------|
+| flux_o2         | nmol/cm^2/s |
+| flux_co2        | nmol/cm^2/s |
+| flux_nhx        | nmol/cm^2/s |
+| totalChl        | mg/m^3      |
+|-----------------+-------------|
+
